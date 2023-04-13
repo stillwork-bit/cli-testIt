@@ -1,72 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-
-  <groupId>org.example</groupId>
   <artifactId>cli-testIt</artifactId>
-  <version>1.0</version>
-
-  <properties>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <junit.platform.version>1.7.0</junit.platform.version>
-    <junit.jupiter.version>5.7.0</junit.jupiter.version>
-    <restAssured.version>4.2.0</restAssured.version>
-    <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
-    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-    <maven-site-plugin.version>3.7.1</maven-site-plugin.version>
-    <maven-surefire-report-plugin.version>3.0.0-M4</maven-surefire-report-plugin.version>
-
-  </properties>
-  <name>CLI Plugin TestIt</name>
-  <url>https://docs.testit.software/user-guide/integrations/automation/testng.html</url>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.junit.platform</groupId>
-      <artifactId>junit-platform-launcher</artifactId>
-      <version>${junit.platform.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>${junit.jupiter.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-surefire-plugin</artifactId>
-      <version>${maven-surefire-plugin.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-site-plugin</artifactId>
-      <version>${maven-site-plugin.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-surefire-report-plugin</artifactId>
-      <version>${maven-surefire-report-plugin.version}</version>
-    </dependency>
-
-  </dependencies>
 
   <build>
     <defaultGoal>install</defaultGoal>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>${maven-compiler-plugin.version}</version>
         <configuration>
 
           <encoding>UTF-8</encoding>
           <source>11</source>
           <target>11</target>
         </configuration>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>${maven-compiler-plugin.version}</version>
       </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -79,21 +29,71 @@
         <version>${maven-surefire-plugin.version}</version>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
         <version>${maven-site-plugin.version}</version>
       </plugin>
     </plugins>
   </build>
+  <dependencies>
+    <dependency>
+      <artifactId>junit-platform-launcher</artifactId>
+      <groupId>org.junit.platform</groupId>
+      <version>${junit.platform.version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>junit-jupiter</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <version>${junit.jupiter.version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <groupId>org.apache.maven.plugins</groupId>
+      <version>${maven-surefire-plugin.version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>maven-site-plugin</artifactId>
+      <groupId>org.apache.maven.plugins</groupId>
+      <version>${maven-site-plugin.version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>maven-surefire-report-plugin</artifactId>
+      <groupId>org.apache.maven.plugins</groupId>
+      <version>${maven-surefire-report-plugin.version}</version>
+    </dependency>
+
+  </dependencies>
+  <groupId>org.example</groupId>
+
+  <modelVersion>4.0.0</modelVersion>
+  <name>CLI Plugin TestIt</name>
+  <properties>
+    <junit.jupiter.version>5.7.0</junit.jupiter.version>
+    <junit.platform.version>1.7.0</junit.platform.version>
+    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+    <maven-site-plugin.version>3.7.1</maven-site-plugin.version>
+    <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+    <maven-surefire-report-plugin.version>3.0.0-M4</maven-surefire-report-plugin.version>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <restAssured.version>4.2.0</restAssured.version>
+
+  </properties>
 
   <reporting>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-report-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
         <version>${maven-surefire-report-plugin.version}</version>
       </plugin>
     </plugins>
   </reporting>
+
+  <url>https://docs.testit.software/user-guide/integrations/automation/testng.html</url>
+
+  <version>1.0</version>
 
 </project>
