@@ -2,6 +2,4 @@
 
 ## CLI plugin TestIt
 
-#### Текст статьи https://docs.google.com/document/d/16wjF1QNjY8l3N2jsXjVKvKgOQcv6KF6MXz37IuyZut0/edit?usp=sharing
-
-#### Ссылка на статью 
+#### Ссылка на статью https://testit.software/blog/post/integraciya-avtotestov-s-test-it-cherez-komandnuyu-stroku-shag-za-shagom
